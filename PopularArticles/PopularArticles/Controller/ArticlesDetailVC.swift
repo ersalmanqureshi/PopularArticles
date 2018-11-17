@@ -22,7 +22,7 @@ class ArticlesDetailVC: UIViewController {
         super.viewDidLoad()
         
         articleTitle.text = "Title: \(article.title)"
-        articleOverview.text = "By \(article.byline)"
+        articleOverview.text = "\(article.byline)"
         adsKeyword.text = article.adsKeyword
         articleAbstract.text = article.abstract
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ArticlesCell: UITableViewCell {
 
@@ -36,6 +37,11 @@ class ArticlesCell: UITableViewCell {
             }
             
             let imageurl = thumnailMetaData[0].url
+            
+            let resource = ImageResource(downloadURL: URL(string: imageurl)!, cacheKey: article.title)
+            
+            articleMedia.kf.indicatorType = .activity
+            articleMedia.kf.setImage(with: resource, options: [.transition(.fade(0.3))])
         }
         
         articleTitle.text = article.title

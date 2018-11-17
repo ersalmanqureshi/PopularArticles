@@ -6,6 +6,7 @@ target 'PopularArticles' do
 
   # Pods for PopularArticles
   pod 'Moya'
+  pod 'Kingfisher'
 
   target 'PopularArticlesTests' do
     inherit! :search_paths
