@@ -22,6 +22,8 @@ class ArticlesDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTapGesture()
+        
         ImageCache.default.retrieveImage(forKey: article.title, options: nil) {
             image, cacheType in
             if let image = image {
@@ -37,15 +39,14 @@ class ArticlesDetailVC: UIViewController {
         articleAbstract.text = article.abstract
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openArticleLink))
+        articleThumbnail.isUserInteractionEnabled = true
+        articleThumbnail.addGestureRecognizer(tapGesture)
     }
-    */
-
+    
+    @objc private func openArticleLink() {
+        guard let url = URL(string: article.url) else { return }
+        UIApplication.shared.open(url)
+    }
 }
