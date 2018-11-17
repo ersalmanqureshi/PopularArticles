@@ -20,7 +20,11 @@ class ArticlesDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Article: \(article)")
+        
+        articleTitle.text = "Title: \(article.title)"
+        articleOverview.text = "Author: \(article.byline)"
+        adsKeyword.text = article.adsKeyword
+        articleAbstract.text = article.abstract
     }
     
 

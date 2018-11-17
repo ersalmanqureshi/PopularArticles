@@ -14,8 +14,9 @@ struct Article: Decodable {
     let title: String
     let publishDate: String
     let abstract: String
+    let adsKeyword: String
     
     private enum CodingKeys: String, CodingKey {
-        case byline, articleType = "type", title, publishDate = "published_date", abstract
+        case byline, articleType = "type", title, publishDate = "published_date", abstract, adsKeyword = "adx_keywords"
     }
 }
