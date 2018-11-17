@@ -8,6 +8,14 @@
 
 import Foundation
 
-class Article {
+struct Article: Decodable {
+    let byline: String
+    let articleType: String
+    let title: String
+    let publishDate: Date
+    let abstract: String
     
+    private enum CodingKeys: String, CodingKey {
+        case byline, articleType = "type", title, publishDate = "published_date", abstract
+    }
 }

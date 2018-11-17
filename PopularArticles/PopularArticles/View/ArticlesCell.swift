@@ -10,7 +10,7 @@ import UIKit
 
 class ArticlesCell: UITableViewCell {
 
-    static final let reuseIdentifier = "ArticlesCell"
+    static let reuseIdentifier = "ArticlesCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
