@@ -22,6 +22,7 @@ class ArticlesVC: UIViewController {
         super.viewDidLoad()
         
         setuptableView()
+        setupActivityIndicator()
         fetchMostPopularArticles()
     }
 
@@ -34,6 +35,13 @@ class ArticlesVC: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    private func setupActivityIndicator(){
+        // set up activity indicator
+        activityIndicator.center = CGPoint(x: view.bounds.size.width/2, y: view.bounds.size.height/2)
+        activityIndicator.color = UIColor.gray
+        tableView.addSubview(activityIndicator)
     }
     
     private func fetchMostPopularArticles() {
