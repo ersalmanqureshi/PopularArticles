@@ -17,6 +17,9 @@
 		5C10418321A04BE20054E0FF /* ArticlesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10417D21A04BE20054E0FF /* ArticlesVC.swift */; };
 		5C10418521A04C780054E0FF /* ArticlesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10418421A04C780054E0FF /* ArticlesDetailVC.swift */; };
 		5C10418721A04CC30054E0FF /* ArticlesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10418621A04CC30054E0FF /* ArticlesCell.swift */; };
+		5C10418921A0561D0054E0FF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10418821A0561D0054E0FF /* API.swift */; };
+		5C10418B21A057520054E0FF /* ArticlesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10418A21A057520054E0FF /* ArticlesAPI.swift */; };
+		5C10418D21A05AC30054E0FF /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10418C21A05AC30054E0FF /* Article.swift */; };
 		AE90602144BAE23E9067EF6D /* Pods_PopularArticlesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64241655AD7482E8C094CDFD /* Pods_PopularArticlesUITests.framework */; };
 		BB0344382D6DAB357A3E64FE /* Pods_PopularArticles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2FACA202D9D1F9AED21A0B /* Pods_PopularArticles.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,9 @@
 		5C10417D21A04BE20054E0FF /* ArticlesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesVC.swift; sourceTree = "<group>"; };
 		5C10418421A04C780054E0FF /* ArticlesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDetailVC.swift; sourceTree = "<group>"; };
 		5C10418621A04CC30054E0FF /* ArticlesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesCell.swift; sourceTree = "<group>"; };
+		5C10418821A0561D0054E0FF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5C10418A21A057520054E0FF /* ArticlesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesAPI.swift; sourceTree = "<group>"; };
+		5C10418C21A05AC30054E0FF /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5EC6584974BBC1A11352677E /* Pods-PopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularArticlesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopularArticlesTests/Pods-PopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64241655AD7482E8C094CDFD /* Pods_PopularArticlesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopularArticlesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		668D164F43829F4EC60AB62A /* Pods-PopularArticlesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularArticlesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopularArticlesTests/Pods-PopularArticlesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +214,8 @@
 		5C10418021A04BE20054E0FF /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5C10418821A0561D0054E0FF /* API.swift */,
+				5C10418A21A057520054E0FF /* ArticlesAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 		5C10418121A04BE20054E0FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5C10418C21A05AC30054E0FF /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -441,10 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C10418D21A05AC30054E0FF /* Article.swift in Sources */,
 				5C10418721A04CC30054E0FF /* ArticlesCell.swift in Sources */,
 				5C10418321A04BE20054E0FF /* ArticlesVC.swift in Sources */,
 				5C10414E21A039930054E0FF /* AppDelegate.swift in Sources */,
 				5C10418521A04C780054E0FF /* ArticlesDetailVC.swift in Sources */,
+				5C10418921A0561D0054E0FF /* API.swift in Sources */,
+				5C10418B21A057520054E0FF /* ArticlesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
