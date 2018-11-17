@@ -14,3 +14,10 @@ This app built with Xcode Version 10.1. Written in Swift 4.
 * API-KEY:`60aeaeae7fff4477958cfe2a8a6a76f5`
 * Example URL: http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=60aeaeae7fff4477958cfe2a8a6a76f5
 * API Documentation: http://developer.nytimes.com/
+
+### Author
+Salman Qureshi, er.salmanqureshi@gmail.com
+
+### License
+
+**PopularArticles** is available under the MIT license. See the LICENSE file for more info.
