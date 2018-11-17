@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ArticlesDetailVC: UIViewController {
 
@@ -21,7 +22,16 @@ class ArticlesDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        articleTitle.text = "Title: \(article.title)"
+        ImageCache.default.retrieveImage(forKey: article.title, options: nil) {
+            image, cacheType in
+            if let image = image {
+                self.articleThumbnail.image = image
+            } else {
+                print("Not exist in cache.")
+            }
+        }
+        
+        articleTitle.text = "\(article.title)"
         articleOverview.text = "\(article.byline)"
         adsKeyword.text = article.adsKeyword
         articleAbstract.text = article.abstract

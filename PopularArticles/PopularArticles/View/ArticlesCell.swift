@@ -33,7 +33,7 @@ class ArticlesCell: UITableViewCell {
             let mediaMetadata = metaData.media_metadata {
             
             let thumnailMetaData = mediaMetadata.filter {
-                $0.format == "Standard Thumbnail"
+                $0.format == "Large"
             }
             
             let imageurl = thumnailMetaData[0].url
