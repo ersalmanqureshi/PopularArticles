@@ -1,10 +1,17 @@
-## PopularArticles
+## PopularArticles-NYTimes
 
 This project displays a list of the most popular viewed New York Times articles from the last 7 days. It enables users to view details about each article, and view the full article in Safari.
 
 This app built with Xcode Version 10.1. Written in Swift 4.
 
-### External Libraries:
+### How to run the Project?
+
+1. Clone this repo
+2. Open terminal window and navigate to project folder where Podfile reside
+3. Run `pod install --verbose`
+4. Open `PopularArticles.xcworkspace` and run the project on real device or simulator
+
+### External Libraries Used:
 [Moya](https://github.com/Moya/Moya)
 
 [Kingfisher](https://github.com/onevcat/Kingfisher).
