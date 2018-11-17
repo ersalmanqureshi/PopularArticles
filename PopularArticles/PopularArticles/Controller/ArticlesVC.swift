@@ -50,7 +50,13 @@ class ArticlesVC: UIViewController {
             }
         })
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifier {
+            let destinationVC = segue.destination as! ArticlesDetailVC
+            destinationVC.article = sender as? Article
+        }
+    }
 }
 
 extension ArticlesVC: UITableViewDataSource, UITableViewDelegate {
@@ -71,6 +77,11 @@ extension ArticlesVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = articles?[indexPath.row]
+        performSegue(withIdentifier: segueIdentifier, sender: article!)
     }
 }
 

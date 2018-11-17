@@ -16,10 +16,11 @@ class ArticlesDetailVC: UIViewController {
     @IBOutlet weak var adsKeyword: UILabel!
     @IBOutlet weak var articleAbstract: UILabel!
     
+    var article: Article!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("Article: \(article)")
     }
     
 
