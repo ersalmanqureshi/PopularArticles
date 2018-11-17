@@ -32,7 +32,7 @@ extension ArtlcesAPI: TargetType {
     var path: String {
         switch self {
         case .mostViewed:
-            return "mostpopular/v2/mostviewed/all-sections/7.json?"
+            return "mostpopular/v2/mostviewed/all-sections/7.json"
         }
     }
     

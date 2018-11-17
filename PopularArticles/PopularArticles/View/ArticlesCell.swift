@@ -12,7 +12,13 @@ class ArticlesCell: UITableViewCell {
 
     static let reuseIdentifier = "ArticlesCell"
     
-    var movie: Article? {
+    @IBOutlet weak var articleMedia: UIImageView!
+    @IBOutlet weak var articleTitle: UILabel!
+    @IBOutlet weak var publishDate: UILabel!
+    @IBOutlet weak var author: UILabel!
+    @IBOutlet weak var articleType: UILabel!
+    
+    var article: Article? {
         didSet {
             updateUI()
         }
@@ -20,11 +26,15 @@ class ArticlesCell: UITableViewCell {
     
     func updateUI() {
         
+        guard let article = article else { return }
+        articleTitle.text = article.title
+        publishDate.text = article.publishDate
+        author.text = article.byline
+        articleType.text = article.articleType
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -12,7 +12,7 @@ struct Article: Decodable {
     let byline: String
     let articleType: String
     let title: String
-    let publishDate: Date
+    let publishDate: String
     let abstract: String
     
     private enum CodingKeys: String, CodingKey {
