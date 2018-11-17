@@ -12,6 +12,16 @@ class ArticlesCell: UITableViewCell {
 
     static let reuseIdentifier = "ArticlesCell"
     
+    var movie: Article? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    func updateUI() {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

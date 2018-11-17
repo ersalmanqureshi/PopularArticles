@@ -12,21 +12,41 @@ class ArticlesVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+    
+    var articles: [Article]? = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setuptableView()
+        fetchMostPopularArticles()
     }
 
     private func setuptableView() {
         tableView.dataSource = self
         tableView.delegate = self
     }
-
+    
+    private func fetchMostPopularArticles() {
+        
+        activityIndicator.startAnimating()
+        
+        API.getMostPopularArticles(completion: { [weak self] results in
+            DispatchQueue.main.async {
+                
+                self?.articles?.append(contentsOf: results)
+                
+                self?.activityIndicator.stopAnimating()
+                self?.tableView.reloadData()
+            }
+        })
+    }
 }
 
 extension ArticlesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return articles?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,6 +57,7 @@ extension ArticlesVC: UITableViewDataSource, UITableViewDelegate {
         
         //TO-DO Update Model data
         //------------
+        
         
         return cell
     }
