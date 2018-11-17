@@ -14,7 +14,7 @@ import Moya
     "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=sample_key"
  */
 struct API {
-    static let apiKey = "60aeaeae7fff4477958cfe2a8a6a76f5"
+    static let apiKey = "b6c94499c2dd459d9aa72d581385d951"
     static let baseUrl = "http://api.nytimes.com/svc/"
     static let provider = MoyaProvider<ArtlcesAPI>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
