@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ArticlesCell: UITableViewCell {
 
@@ -27,6 +28,22 @@ class ArticlesCell: UITableViewCell {
     func updateUI() {
         
         guard let article = article else { return }
+        
+        if let media = article.media, let metaData = media.first,
+            let mediaMetadata = metaData.media_metadata {
+            
+            let thumnailMetaData = mediaMetadata.filter {
+                $0.format == "Standard Thumbnail"
+            }
+            
+            let imageurl = thumnailMetaData[0].url
+            
+            let resource = ImageResource(downloadURL: URL(string: imageurl)!, cacheKey: article.title)
+            
+            articleMedia.kf.indicatorType = .activity
+            articleMedia.kf.setImage(with: resource, options: [.transition(.fade(0.3))])
+        }
+        
         articleTitle.text = article.title
         publishDate.text = article.publishDate
         author.text = article.byline
@@ -42,5 +59,4 @@ class ArticlesCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
