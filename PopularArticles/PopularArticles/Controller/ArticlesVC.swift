@@ -24,6 +24,10 @@ class ArticlesVC: UIViewController {
     }
 
     private func setuptableView() {
+        
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableView.automaticDimension
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -55,12 +59,13 @@ extension ArticlesVC: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        //TO-DO Update Model data
-        //------------
-        
+        cell.article = articles?[indexPath.row]
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
