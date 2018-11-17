@@ -10,6 +10,12 @@ import UIKit
 
 class ArticlesDetailVC: UIViewController {
 
+    @IBOutlet weak var articleThumbnail: UIImageView!
+    @IBOutlet weak var articleTitle: UILabel!
+    @IBOutlet weak var articleOverview: UILabel!
+    @IBOutlet weak var adsKeyword: UILabel!
+    @IBOutlet weak var articleAbstract: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

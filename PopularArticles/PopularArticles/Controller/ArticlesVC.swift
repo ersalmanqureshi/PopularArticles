@@ -16,6 +16,8 @@ class ArticlesVC: UIViewController {
     
     var articles: [Article]? = []
     
+    let segueIdentifier = "listingToDetailSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,8 @@ class ArticlesVC: UIViewController {
         
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
+        
+        tableView.tableFooterView = UIView()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -46,6 +50,7 @@ class ArticlesVC: UIViewController {
             }
         })
     }
+
 }
 
 extension ArticlesVC: UITableViewDataSource, UITableViewDelegate {
