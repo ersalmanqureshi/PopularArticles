@@ -27,6 +27,17 @@ class ArticlesCell: UITableViewCell {
     func updateUI() {
         
         guard let article = article else { return }
+        
+        if let media = article.media, let metaData = media.first,
+            let mediaMetadata = metaData.media_metadata {
+            
+            let thumnailMetaData = mediaMetadata.filter {
+                $0.format == "Standard Thumbnail"
+            }
+            
+            let imageurl = thumnailMetaData[0].url
+        }
+        
         articleTitle.text = article.title
         publishDate.text = article.publishDate
         author.text = article.byline
@@ -42,5 +53,4 @@ class ArticlesCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
