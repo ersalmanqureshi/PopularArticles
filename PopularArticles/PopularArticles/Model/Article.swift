@@ -9,6 +9,7 @@
 import Foundation
 
 struct Article: Decodable {
+    let url: String
     let byline: String
     let articleType: String
     let title: String
@@ -18,6 +19,6 @@ struct Article: Decodable {
     let media: [Media]?
     
     private enum CodingKeys: String, CodingKey {
-        case byline, articleType = "type", title, publishDate = "published_date", abstract, adsKeyword = "adx_keywords", media
+        case url, byline, articleType = "type", title, publishDate = "published_date", abstract, adsKeyword = "adx_keywords", media
     }
 }
