@@ -11,7 +11,7 @@ This app built with Xcode Version 10.1. Written in Swift 4.
 
 ### API Details:
 * Base URL: http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=#APIKEY
-* API-KEY:`60aeaeae7fff4477958cfe2a8a6a76f5`
+* API-KEY:`b6c94499c2dd459d9aa72d581385d951`
 * Example URL: http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=60aeaeae7fff4477958cfe2a8a6a76f5
 * API Documentation: http://developer.nytimes.com/
 
