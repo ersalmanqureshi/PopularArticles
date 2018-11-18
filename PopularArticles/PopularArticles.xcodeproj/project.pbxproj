@@ -23,6 +23,7 @@
 		5C10418F21A05D680054E0FF /* ArticleResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10418E21A05D680054E0FF /* ArticleResults.swift */; };
 		5C10419121A07E870054E0FF /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10419021A07E870054E0FF /* Media.swift */; };
 		5C10419321A07F6F0054E0FF /* MediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10419221A07F6F0054E0FF /* MediaMetadata.swift */; };
+		5C7AB08021A143C20024C571 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7AB07F21A143C20024C571 /* Toast.swift */; };
 		AE90602144BAE23E9067EF6D /* Pods_PopularArticlesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64241655AD7482E8C094CDFD /* Pods_PopularArticlesUITests.framework */; };
 		BB0344382D6DAB357A3E64FE /* Pods_PopularArticles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2FACA202D9D1F9AED21A0B /* Pods_PopularArticles.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		5C10418E21A05D680054E0FF /* ArticleResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResults.swift; sourceTree = "<group>"; };
 		5C10419021A07E870054E0FF /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		5C10419221A07F6F0054E0FF /* MediaMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMetadata.swift; sourceTree = "<group>"; };
+		5C7AB07F21A143C20024C571 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		5EC6584974BBC1A11352677E /* Pods-PopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularArticlesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopularArticlesTests/Pods-PopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64241655AD7482E8C094CDFD /* Pods_PopularArticlesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopularArticlesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		668D164F43829F4EC60AB62A /* Pods-PopularArticlesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularArticlesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopularArticlesTests/Pods-PopularArticlesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		5C10417F21A04BE20054E0FF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				5C7AB07F21A143C20024C571 /* Toast.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				5C10418521A04C780054E0FF /* ArticlesDetailVC.swift in Sources */,
 				5C10419121A07E870054E0FF /* Media.swift in Sources */,
 				5C10418F21A05D680054E0FF /* ArticleResults.swift in Sources */,
+				5C7AB08021A143C20024C571 /* Toast.swift in Sources */,
 				5C10418921A0561D0054E0FF /* API.swift in Sources */,
 				5C10418B21A057520054E0FF /* ArticlesAPI.swift in Sources */,
 			);
