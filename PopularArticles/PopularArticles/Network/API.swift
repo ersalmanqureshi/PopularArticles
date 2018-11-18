@@ -13,6 +13,9 @@ import Moya
 /*
     "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=sample_key"
  */
+
+
+
 struct API {
     static let apiKey = "b6c94499c2dd459d9aa72d581385d951"
     static let baseUrl = "http://api.nytimes.com/svc/"

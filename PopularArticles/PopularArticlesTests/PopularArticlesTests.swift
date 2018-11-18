@@ -8,11 +8,23 @@
 
 import XCTest
 @testable import PopularArticles
+import Moya
 
 class PopularArticlesTests: XCTestCase {
     
+    var stubbingProvider: MoyaProvider<ArtlcesAPI>!
+    
+    let serverErrorEndpointClosure = { (target: ArtlcesAPI) -> Endpoint in
+        return Endpoint(url: URL(target: target).absoluteString,
+                        sampleResponseClosure: { .networkResponse(200, target.testSampleData) },
+                        method: target.method,
+                        task: target.task,
+                        httpHeaderFields: target.headers)
+    }
+    
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        stubbingProvider = MoyaProvider<ArtlcesAPI>(endpointClosure: serverErrorEndpointClosure, stubClosure: MoyaProvider.immediatelyStub)
     }
 
     override func tearDown() {
@@ -27,5 +39,23 @@ class PopularArticlesTests: XCTestCase {
         XCTAssertEqual(article.url, "https://www.nytimes.com/")
         XCTAssertEqual(article.publishDate, "2018-11-06")
         XCTAssertEqual(article.articleType, "Interactive")
+    }
+    
+    func testNetwork() {
+        let expectation = self.expectation(description: "request")
+        _ = stubbingProvider.request(.mostViewed) { res in
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 5.0, handler: nil)
+    }
+}
+
+extension ArtlcesAPI {
+    var testSampleData: Data {
+        switch self {
+        case .mostViewed:
+            let url = Bundle(for: PopularArticlesTests.self).url(forResource: "articles", withExtension: "json")!
+            return try! Data(contentsOf: url)
+        }
     }
 }

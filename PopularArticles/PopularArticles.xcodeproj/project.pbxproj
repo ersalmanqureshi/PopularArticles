@@ -24,6 +24,8 @@
 		5C10419121A07E870054E0FF /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10419021A07E870054E0FF /* Media.swift */; };
 		5C10419321A07F6F0054E0FF /* MediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10419221A07F6F0054E0FF /* MediaMetadata.swift */; };
 		5C7AB08021A143C20024C571 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7AB07F21A143C20024C571 /* Toast.swift */; };
+		5C7AB08321A15D1C0024C571 /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AB08221A15D1C0024C571 /* articles.json */; };
+		5C7AB08421A15D1C0024C571 /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AB08221A15D1C0024C571 /* articles.json */; };
 		AE90602144BAE23E9067EF6D /* Pods_PopularArticlesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64241655AD7482E8C094CDFD /* Pods_PopularArticlesUITests.framework */; };
 		BB0344382D6DAB357A3E64FE /* Pods_PopularArticles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2FACA202D9D1F9AED21A0B /* Pods_PopularArticles.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,7 @@
 		5C10419021A07E870054E0FF /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		5C10419221A07F6F0054E0FF /* MediaMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMetadata.swift; sourceTree = "<group>"; };
 		5C7AB07F21A143C20024C571 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		5C7AB08221A15D1C0024C571 /* articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
 		5EC6584974BBC1A11352677E /* Pods-PopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularArticlesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopularArticlesTests/Pods-PopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64241655AD7482E8C094CDFD /* Pods_PopularArticlesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopularArticlesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		668D164F43829F4EC60AB62A /* Pods-PopularArticlesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularArticlesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopularArticlesTests/Pods-PopularArticlesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +174,7 @@
 		5C10416121A039940054E0FF /* PopularArticlesTests */ = {
 			isa = PBXGroup;
 			children = (
+				5C7AB08221A15D1C0024C571 /* articles.json */,
 				5C10416221A039940054E0FF /* PopularArticlesTests.swift */,
 				5C10416421A039940054E0FF /* Info.plist */,
 			);
@@ -356,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7AB08321A15D1C0024C571 /* articles.json in Resources */,
 				5C10415821A039940054E0FF /* LaunchScreen.storyboard in Resources */,
 				5C10415521A039940054E0FF /* Assets.xcassets in Resources */,
 				5C10415321A039930054E0FF /* Main.storyboard in Resources */,
@@ -366,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7AB08421A15D1C0024C571 /* articles.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
