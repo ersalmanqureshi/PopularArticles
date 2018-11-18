@@ -18,6 +18,8 @@ class ArticlesVC: UIViewController {
     
     let segueIdentifier = "listingToDetailSegue"
     
+    let service = API()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,13 +50,17 @@ class ArticlesVC: UIViewController {
         
         activityIndicator.startAnimating()
         
-        API.getMostPopularArticles(completion: { [weak self] results in
+        service.getMostPopularArticles(completion: { [weak self] results, error  in
             DispatchQueue.main.async {
                 
-                self?.articles?.append(contentsOf: results)
+                if error != nil {
+                    //Some toast
+                } else {
+                    self?.articles?.append(contentsOf: results!)
+                }
                 
                 self?.activityIndicator.stopAnimating()
-                self?.tableView.reloadData()
+                
             }
         })
     }

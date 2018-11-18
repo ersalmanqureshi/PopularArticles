@@ -16,22 +16,29 @@ import Moya
 struct API {
     static let apiKey = "b6c94499c2dd459d9aa72d581385d951"
     static let baseUrl = "http://api.nytimes.com/svc/"
-    static let provider = MoyaProvider<ArtlcesAPI>()
+    fileprivate let provider = MoyaProvider<ArtlcesAPI>()
     
-    static func getMostPopularArticles(completion: @escaping (([Article]) -> ())) {
+    func getMostPopularArticles(completion: @escaping (([Article]?, NetworkingErrors?) -> ())) {
         provider.request(.mostViewed) { result in
             switch result {
             case let .success(response):
                 do {
                     let results = try JSONDecoder().decode(ArticleResults.self, from: response.data)
-                    completion(results.articles)
+                    completion(results.articles, nil)
                 } catch let err{
+                    completion(nil, NetworkingErrors.errorParsingJSON)
                     print(err)
                 }
             case let .failure(error):
+                
                 print(error)
+                completion(nil, NetworkingErrors.noInternetConnection)
             }
         }
     }
-    
+}
+
+enum NetworkingErrors: Error {
+    case errorParsingJSON
+    case noInternetConnection
 }
