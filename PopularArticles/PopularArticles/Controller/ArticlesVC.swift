@@ -12,8 +12,6 @@ class ArticlesVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
-    
     var articles: [Article]? = []
     
     let segueIdentifier = "listingToDetailSegue"
@@ -24,7 +22,6 @@ class ArticlesVC: UIViewController {
         super.viewDidLoad()
         
         setuptableView()
-        setupActivityIndicator()
         fetchMostPopularArticles()
     }
 
@@ -39,28 +36,29 @@ class ArticlesVC: UIViewController {
         tableView.delegate = self
     }
     
-    private func setupActivityIndicator(){
-        // set up activity indicator
-        activityIndicator.center = CGPoint(x: view.bounds.size.width/2, y: view.bounds.size.height/2)
-        activityIndicator.color = UIColor.gray
-        tableView.addSubview(activityIndicator)
-    }
-    
     private func fetchMostPopularArticles() {
         
-        activityIndicator.startAnimating()
+        view.makeToastActivity(.center)
         
         service.getMostPopularArticles(completion: { [weak self] results, error  in
             DispatchQueue.main.async {
                 
                 if error != nil {
                     //Some toast
+                    
+                    if error == NetworkingErrors.noInternetConnection {
+                        self?.view.makeToast("No internet connection", duration: 2.0, position: .center)
+                    } else {
+                        self?.view.makeToast("Error parsing JSON", duration: 2.0, position: .center)
+                    }
+                    
                 } else {
+                    //self?.view.makeToast("Success", duration: 2.0, position: .center)
                     self?.articles?.append(contentsOf: results!)
                 }
                 
-                self?.activityIndicator.stopAnimating()
-                
+                self?.view.hideToastActivity()
+                self?.tableView.reloadData()
             }
         })
     }
