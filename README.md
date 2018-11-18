@@ -11,6 +11,16 @@ This app built with Xcode Version 10.1. Written in Swift 4.
 3. Run `pod install --verbose`
 4. Open `PopularArticles.xcworkspace` and run the project on real device or simulator
 
+### How test can be run in the Project?
+
+1. Select Product -> Edit Scheme -> Under test section -> Open options -> Select gather coverage data
+2. Press Cmd + U to run the test and go to test section from left navigator panel, you will see green badge if test run successfully and red badge if any error
+3. For code coverage, Go the last log section from left navigate panel -> click on coverage.
+
+//--Pending-------
+Attached below screenshot for reference,
+
+
 ### External Libraries Used:
 [Moya](https://github.com/Moya/Moya)
 
