@@ -17,8 +17,19 @@ This app built with Xcode Version 10.1. Written in Swift 4.
 2. Press Cmd + U to run the test and go to test section from left navigator panel, you will see green badge if test run successfully and red badge if any error
 3. For code coverage, Go the last log section from left navigate panel -> click on coverage.
 
-//--Pending-------
-Attached below screenshot for reference,
+#### Attached below screenshot for reference,
+
+Step 1:
+
+![N|Solid](https://cldup.com/vDV7pPgHti.png)
+
+Step 2:
+
+![N|Solid](https://cldup.com/VTnpRFnwnO.png)
+
+Step 3:
+
+![N|Solid](https://cldup.com/cj4PuFhaeQ.png)
 
 
 ### External Libraries Used:
