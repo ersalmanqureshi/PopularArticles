@@ -2,7 +2,7 @@
 
 This project displays a list of the most popular viewed New York Times articles from the last 7 days. It enables users to view details about each article, and view the full article in Safari.
 
-This app built with Xcode Version 10.1. Written in Swift 4.
+This app is built with Xcode Version 10.1. Written in Swift 4.
 
 ### How to run the Project?
 
