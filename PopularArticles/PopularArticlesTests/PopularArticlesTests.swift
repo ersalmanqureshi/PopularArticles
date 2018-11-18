@@ -19,16 +19,13 @@ class PopularArticlesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitialization() {
+        
+        let article = Article(url: "https://www.nytimes.com/", byline: "By Salman", articleType: "Interactive", title: "Senate Election Results: Republicans Keep Majority", publishDate: "2018-11-06", abstract: "See live U.S. Senate results and maps.", adsKeyword: "2018 Election Results;Midterm Elections (2018)", media: [])
+        
+        XCTAssertNotNil(article)
+        XCTAssertEqual(article.url, "https://www.nytimes.com/")
+        XCTAssertEqual(article.publishDate, "2018-11-06")
+        XCTAssertEqual(article.articleType, "Interactive")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
